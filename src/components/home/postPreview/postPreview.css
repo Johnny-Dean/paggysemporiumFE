@@ -1,0 +1,25 @@
+div.content {
+    margin-top: 10px;
+    width: 35em;
+    padding: .5em;
+}
+
+div.article{
+    margin-bottom: 2em;
+}
+
+fieldset {
+    text-align: left;
+}
+legend {
+    margin-left: 1em;
+}
+fieldset.LIFT{
+    border: coral 2px solid;
+}
+fieldset.MUSIC{
+    border: lightblue 2px solid;
+}
+fieldset.EAT{
+    border: lightgreen 2px solid;
+}
