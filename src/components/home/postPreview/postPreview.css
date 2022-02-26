@@ -2,10 +2,16 @@ div.content {
     margin-top: 10px;
     width: 35em;
     padding: .5em;
+    text-align: center;
 }
 
 div.article{
     margin-bottom: 2em;
+}
+
+div.article.MUSIC{
+    padding-left: .25em;
+    padding-righ: .25em;
 }
 
 fieldset {
