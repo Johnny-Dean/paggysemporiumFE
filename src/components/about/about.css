@@ -12,5 +12,11 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 35em;
+    width: 606px;
+}
+.links{
+    margin-top: .75em;
+}
+.links a{
+    color: mediumblue;
 }

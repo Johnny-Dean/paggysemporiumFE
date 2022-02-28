@@ -1,8 +1,8 @@
 div.content {
     margin-top: 10px;
-    width: 35em;
+    width: 606px;
     padding: .5em;
-    text-align: center;
+    justify-content: center;
 }
 
 div.article{
@@ -12,6 +12,14 @@ div.article{
 div.article.MUSIC{
     padding-left: .25em;
     padding-righ: .25em;
+}
+
+.music-container {
+    text-align: center;
+}
+
+.spacing {
+   padding: 0 .5em;
 }
 
 fieldset {

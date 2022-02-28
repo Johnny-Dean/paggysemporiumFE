@@ -1,0 +1,23 @@
+.lift-container {
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    border: black 1px solid;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 300px;
+}
+
+th {
+    background-color: coral;
+    color: #ffffff;
+    text-align: left;
+}
+
+th, td {
+    padding: 6px 7px;
+}
