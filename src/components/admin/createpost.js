@@ -3,6 +3,8 @@ import {useState} from "react";
 import LiftForm from "./forms/liftform";
 import './createpost.css'
 import CreatePostHead from "./createpostbanner";
+import postService from '../../services/posts'
+
 const InputField = ({id, placeholderText, value, handleChange}) => {
     return (
         <label className='custom-field'>
@@ -16,13 +18,32 @@ const TextArea = ({id, placeholderText, value, handleChange}) => {
     )
 }
 
+    // id: 2,
+    // title: "Music I've been listening to this month",
+    // body: "This month I felt like listening to thsi music because lbah blah blah and I think that actually blah",
+    // url: "https://open.spotify.com/embed/playlist/5gHtLtMlGfNklGVCZfNmPz?utm_source=generator",
+    // tag: "MUSIC"
 
 function CreatePost(){
     const [title, setTitle] = useState('')
     const [body, setBody] = useState('')
     const [embedLink, setEmbedLink] = useState('')
-    const [activeTag, setActiveTag] = useState('LIFT')
     const [workout, setWorkout] = useState([])
+    const [activeTag, setActiveTag] = useState('THOUGHTS')
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        const postObj = {
+            title: title,
+            body: body,
+            embedLink: embedLink,
+            workout: workout,
+            tag: activeTag
+        }
+        console.log(postObj)
+        postService.create(postObj)
+            .then(res => console.log(res))
+    }
 
     const handleChange = (event) => {
         let newValue = event.target.value
@@ -48,7 +69,7 @@ function CreatePost(){
             case 'MUSIC':
                 return <InputField id='link' placeholderText='Paste Embed Link' value={embedLink} handleChange={handleChange}/>
             case 'LIFT':
-                return <LiftForm />
+                return <LiftForm setWorkout={setWorkout} workout={workout}/>
             default:
                 return;
         }
@@ -58,7 +79,7 @@ function CreatePost(){
                 <CreatePostHead handleChange={handleChange} title={title} activeTag={activeTag} />
                 {customFormGenerator(activeTag)}
                 <TextArea id='body' placeholderText='Enter Body' value={body} handleChange={handleChange}/>
-                {/*<button type='submit'>Post</button>*/}
+                <button type='submit' onClick={handleSubmit}>Post</button>
             </form>
         )
 }

@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    margin-bottom: 1em
 }
 .input-container {
     margin: 0em 2em;

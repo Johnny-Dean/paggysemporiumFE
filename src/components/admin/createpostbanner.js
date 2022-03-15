@@ -21,7 +21,7 @@ const TagSelect = ({activeTagBtn, handleChange}) => {
         </div>
     )
 }
-// is there a way to reduce the redundanct of this component and pass it?
+// is there a way to reduce the redundancy of this component and pass it?
 const InputField = ({id, placeholderText, value, handleChange}) => {
     return (
         <label className='custom-field'>

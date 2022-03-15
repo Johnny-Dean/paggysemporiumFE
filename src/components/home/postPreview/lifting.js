@@ -2,22 +2,27 @@ import React from "react";
 import './lifting.css'
 const TableHead = () => {
     return (
-        <tr>
-            <th>Exercise</th>
-            <th>Reps</th>
-            <th>Sets</th>
-            <th>Weight</th>
-        </tr>
+        <thead>
+            <tr>
+                <td>Exercise</td>
+                <td>Reps</td>
+                <td>Sets</td>
+                <td>Weight</td>
+            </tr>
+        </thead>
     )
 }
 const DataRow = ({exercise}) => {
 return (
-    <tr>
-        <td>{exercise.name}</td>
-        <td>{exercise.reps}</td>
-        <td>{exercise.sets}</td>
-        <td>{exercise.weight}</td>
-    </tr>
+    <tbody>
+        <tr>
+            <td>{exercise.name}</td>
+            <td>{exercise.reps}</td>
+            <td>{exercise.sets}</td>
+            <td>{exercise.weight}</td>
+        </tr>
+    </tbody>
+
     )
 }
 // have to pass workout in here but using placeholder data
@@ -49,6 +54,7 @@ const Lift = ({body}) => {
         <>
             <div className='lift-container'>
                 <table>
+
                     <TableHead />
                     {workout.exercises.map(exercise => <DataRow exercise={exercise} />)}
                 </table>

@@ -3,7 +3,7 @@ import React from "react";
 
 import Home from "./components/home/home";
 import About from "./components/about/about"
-import CreatePost from "./components/createpost/createpost";
+import CreatePost from "./components/admin/createpost";
 function App() {
 
   return (

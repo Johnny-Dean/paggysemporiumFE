@@ -12,7 +12,7 @@ table {
     min-width: 300px;
 }
 
-th {
+thead {
     background-color: coral;
     color: #ffffff;
     text-align: left;
